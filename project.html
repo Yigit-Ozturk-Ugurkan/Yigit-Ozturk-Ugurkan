@@ -1,68 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Project</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="project-detail">
-
-<h1 id="title"></h1>
-
-<p id="desc"></p>
-
-<a id="demo" class="btn" target="_blank">Live Demo</a>
-
-<a id="drive" class="btn" target="_blank">Drive Link</a>
-
-</div>
-
 <script>
+  const params = new URLSearchParams(window.location.search);
+  const project = params.get("project");
 
-const params = new URLSearchParams(window.location.search);
-const project = params.get("project");
+  const data = {
+    ztna: {
+      title: "ZTNA Security Platform",
+      desc: "This project is a network access control system developed based on Zero Trust principles. Unlike traditional security models that assume the internal network is trusted, Zero Trust requires verification of every user and every access request. Within this project, a secure access architecture was designed with a strong focus on authentication, authorization and protected backend communication.",
+      image: "ztna.png",
+      demo: "https://wbt-project.com/",
+      drive: "https://drive.google.com/drive/u/0/folders/1oybOvUmxSDfLu-fk1miwkdrYUtnVj_67",
+      highlights: [
+        "Central identity management with Keycloak",
+        "JWT-based secure session management",
+        "Role-Based Access Control (RBAC) architecture",
+        "Central authentication and Single Sign-On structure",
+        "Secure API access control mechanism",
+        "Microservice-based secure API architecture",
+        "User authentication system",
+        "Authorization layer and role-based access management",
+        "Token-based secure access control"
+      ],
+      tech: [
+        "Keycloak",
+        "JWT",
+        "RBAC",
+        "Authentication",
+        "Authorization",
+        "SSO",
+        "API Security",
+        "Backend System",
+        "Zero Trust"
+      ]
+    },
 
-const data = {
+    finance: {
+      title: "Finance Tracker",
+      desc: "This project is a personal finance and investment tracking application that enables users to monitor their income and expenses while also analyzing the performance of investment tools. The system was designed with a user-oriented approach and includes data-focused reporting and analysis screens for better financial awareness.",
+      image: "finance.png",
+      demo: "#",
+      drive: "https://drive.google.com/drive/u/0/folders/1W6BsINzBa0S53d98Snp6pdedZ7eNA4nT",
+      highlights: [
+        "Income and expense tracking system",
+        "Database design and structured data management",
+        "Financial analysis and reporting screens",
+        "User-oriented finance management interface",
+        "Investment and budget monitoring approach"
+      ],
+      tech: [
+        "Finance Management",
+        "SQL",
+        "Database Design",
+        "Reporting",
+        "Data Analysis",
+        "UI/UX"
+      ]
+    },
 
-ztna:{
-title:"ZTNA Security Platform",
-desc:"Zero Trust security architecture with Keycloak authentication and JWT authorization.",
-demo:"https://wbt-project.com/",
-drive:"https://drive.google.com/drive/u/0/folders/1oybOvUmxSDfLu-fk1miwkdrYUtnVj_67"
-},
+    coffee: {
+      title: "Coffee App",
+      desc: "CoffeeApp is a mobile coffee ordering and management application that allows users to browse coffee and dessert products, place orders and review their order history. The application was developed with modern mobile interface principles and adopts a user experience focused design supported by Firebase services.",
+      image: "coffee.png",
+      demo: "#",
+      drive: "https://drive.google.com/drive/u/0/folders/1x1rumdt4soJdZDIjXbeZjCs4x2iwKG5K",
+      highlights: [
+        "Firebase Authentication based login and registration system",
+        "Firebase Realtime Database integration for data management",
+        "Firebase Storage integration for image content",
+        "Coffee and dessert product listing",
+        "Product detail pages",
+        "Order creation and order history display",
+        "User profile management",
+        "Modern mobile interface design focused on usability"
+      ],
+      tech: [
+        "Android",
+        "Java",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "Firebase Storage",
+        "Mobile UI/UX"
+      ]
+    },
 
-finance:{
-title:"Finance Tracker",
-desc:"Personal finance management system with analytics dashboard.",
-demo:"#",
-drive:"https://drive.google.com/drive/u/0/folders/1W6BsINzBa0S53d98Snp6pdedZ7eNA4nT"
-},
+    avatar: {
+      title: "Interactive AI Avatar",
+      desc: "In this project, an AI-powered interactive character was developed for story-based games. The system is capable of building dynamic interaction with the player and generating contextual responses using natural language processing techniques. The aim of the project is to combine intelligent interaction with immersive software experiences.",
+      image: "avatar.png",
+      demo: "#",
+      drive: "https://drive.google.com/drive/u/0/folders/1TGqWx-TUM85WMUxYJkSZf0oygUJAeu55",
+      highlights: [
+        "Natural language processing based response system",
+        "AI character behavior integrated into a story-based game logic",
+        "Dynamic reactions according to player input",
+        "Interactive companion design for immersive experiences",
+        "AI integration for user-facing interaction systems"
+      ],
+      tech: [
+        "Python",
+        "AI Integration",
+        "NLP",
+        "Interactive Systems",
+        "Game Interaction",
+        "Emotional Interaction"
+      ]
+    }
+  };
 
-coffee:{
-title:"Coffee App",
-desc:"Android mobile coffee ordering system using Firebase backend.",
-demo:"#",
-drive:"https://drive.google.com/drive/u/0/folders/1x1rumdt4soJdZDIjXbeZjCs4x2iwKG5K"
-},
+  const item = data[project];
 
-avatar:{
-title:"Interactive Desktop Cat Avatar",
-desc:"AI powered interactive avatar using Python and Unity.",
-demo:"#",
-drive:"https://drive.google.com/drive/u/0/folders/1TGqWx-TUM85WMUxYJkSZf0oygUJAeu55"
-}
+  if (!item) {
+    document.querySelector(".detail-container").innerHTML = `
+      <section class="detail-card">
+        <h1>Project not found</h1>
+        <p>The project you requested does not exist.</p>
+        <a href="index.html#projects" class="btn">Back to Projects</a>
+      </section>
+    `;
+  } else {
+    document.getElementById("title").innerText = item.title;
+    document.getElementById("desc").innerText = item.desc;
+    document.getElementById("projectImage").src = item.image;
+    document.getElementById("projectImage").alt = item.title;
+    document.getElementById("demo").href = item.demo;
+    document.getElementById("drive").href = item.drive;
 
-}
+    const highlightsEl = document.getElementById("highlights");
+    item.highlights.forEach(point => {
+      const li = document.createElement("li");
+      li.textContent = point;
+      highlightsEl.appendChild(li);
+    });
 
-document.getElementById("title").innerText=data[project].title
-document.getElementById("desc").innerText=data[project].desc
-document.getElementById("demo").href=data[project].demo
-document.getElementById("drive").href=data[project].drive
-
+    const techTagsEl = document.getElementById("techTags");
+    item.tech.forEach(tag => {
+      const span = document.createElement("span");
+      span.className = "tag";
+      span.textContent = tag;
+      techTagsEl.appendChild(span);
+    });
+  }
 </script>
-
-</body>
-</html>
