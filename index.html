@@ -1,88 +1,133 @@
-<!doctype html>
-<html lang="tr">
-  <head>
-    <!-- UTF-8 önerilir (metin/karakter bozulmalarını önler) -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YMH354 - CSS ile Tasarım Örneği</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uğurkan Yiğit Öztürk | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- External CSS (en önerilen yöntem) -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<body>
 
-  <body>
-    <a class="skip-link" href="#content">İçeriğe atla</a>
+<header class="navbar">
+<h2>UYÖ</h2>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">YMH354</h1>
-        <p class="tagline">Designing with CSS: Layout, Selectors, Box Model</p>
-      </div>
-    </header>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <nav class="site-nav" aria-label="Ana menü">
-      <div class="container">
-        <ul class="nav-list">
-          <li><a href="#selectors">Selectors</a></li>
-          <li><a href="#layout">Layout</a></li>
-          <li><a href="#boxmodel">Box Model</a></li>
-          <li><a href="#responsive">Responsive</a></li>
-        </ul>
-      </div>
-    </nav>
+<section class="hero">
 
-    <main class="container layout" id="content">
-      <article class="card" id="selectors">
-        <h2>1) Selectors + Pseudo-class</h2>
-        <p>
-          Bu paragraf normal akışta. <span class="badge">.class</span> ve
-          <span id="special">#id</span> örneği içeriyor.
-        </p>
+<img src="profile.jpg" class="profile-photo">
 
-        <p class="note">
-          Linkin üzerine gel: <a href="#selectors">hover örneği</a>
-        </p>
+<div class="hero-text">
 
-        <button class="btn" type="button">Buton</button>
-      </article>
+<h1>Uğurkan Yiğit Öztürk</h1>
 
-      <aside class="sidebar card" id="layout">
-        <h2>2) Sidebar</h2>
-        <p>
-          Bu alan tipik web sayfası düzenini (header/nav/content/sidebar/footer)
-          göstermeye yarar.
-        </p>
+<h3>Software Engineering Student | Cybersecurity & AI Enthusiast</h3>
 
-        <div class="callout">
-          <strong>İpucu:</strong> box-sizing: border-box kullanmak hesaplamaları kolaylaştırır.
-        </div>
-      </aside>
+<p>
+Hello, I'm Yiğit. As a third-year software engineering student, I focus on
+cybersecurity, modern network architectures and artificial intelligence
+applications. My work includes Zero Trust security architectures,
+authentication systems and interactive AI based applications.
+</p>
 
-      <section class="card" id="boxmodel">
-        <h2>3) Box Model Demo</h2>
-        <div class="box-demo">
-          <div class="box">
-            <p>
-              Bu kutu; <em>content</em>, <em>padding</em>, <em>border</em>, <em>margin</em>
-              bileşenlerini görselleştirir.
-            </p>
-          </div>
-        </div>
-      </section>
+<div class="hero-buttons">
 
-      <section class="card" id="responsive">
-        <h2>4) Responsive (Media Query)</h2>
-        <p>
-          Ekran daraldığında yerleşim tek sütuna düşecek ve menü daha kompakt görünecek.
-          Tarayıcı genişliğini değiştirip gözlemleyin.
-        </p>
-      </section>
-    </main>
+<a href="CV.pdf" target="_blank" class="btn">View CV</a>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>© YMH354 Web Design and Programming</small>
-      </div>
-    </footer>
-  </body>
+<a href="https://github.com/Yigit-Ozturk-Ugurkan" target="_blank" class="btn">GitHub</a>
+
+<a href="https://www.linkedin.com/in/uğurkan-yiğit-öztürk-a6b8692b9" target="_blank" class="btn">LinkedIn</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<img src="ztna.png">
+<h3>ZTNA Security Platform</h3>
+<p>Zero Trust Network Access architecture using Keycloak and JWT.</p>
+
+<a href="project.html?project=ztna" class="btn">Details</a>
+</div>
+
+
+<div class="project-card">
+<img src="finance.png">
+<h3>Finance Tracker</h3>
+<p>Personal finance and investment tracking application.</p>
+
+<a href="project.html?project=finance" class="btn">Details</a>
+</div>
+
+
+<div class="project-card">
+<img src="coffee.png">
+<h3>Coffee App</h3>
+<p>Mobile coffee ordering system built with Firebase backend.</p>
+
+<a href="project.html?project=coffee" class="btn">Details</a>
+</div>
+
+
+<div class="project-card">
+<img src="avatar.png">
+<h3>Interactive AI Avatar</h3>
+<p>AI powered interactive avatar for story-based games.</p>
+
+<a href="project.html?project=avatar" class="btn">Details</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="research">
+
+<h2>Research Interests</h2>
+
+<ul class="research">
+
+<li>Cyber Security</li>
+<li>Zero Trust Network Access (ZTNA)</li>
+<li>Intent Based Networking (IBN)</li>
+<li>Artificial Intelligence Applications</li>
+<li>Emotional Interaction Systems</li>
+<li>Secure Backend Architectures</li>
+
+</ul>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: ugurkan.yigit.27@gmail.com</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Uğurkan Yiğit Öztürk</p>
+
+</footer>
+
+</body>
 </html>
