@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="project-detail">
+
+<h1 id="title"></h1>
+
+<p id="desc"></p>
+
+<a id="demo" class="btn" target="_blank">Live Demo</a>
+
+<a id="drive" class="btn" target="_blank">Drive Link</a>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const project = params.get("project");
+
+const data = {
+
+ztna:{
+title:"ZTNA Security Platform",
+desc:"Zero Trust security architecture with Keycloak authentication and JWT authorization.",
+demo:"https://wbt-project.com/",
+drive:"https://drive.google.com/drive/u/0/folders/1oybOvUmxSDfLu-fk1miwkdrYUtnVj_67"
+},
+
+finance:{
+title:"Finance Tracker",
+desc:"Personal finance management system with analytics dashboard.",
+demo:"#",
+drive:"https://drive.google.com/drive/u/0/folders/1W6BsINzBa0S53d98Snp6pdedZ7eNA4nT"
+},
+
+coffee:{
+title:"Coffee App",
+desc:"Android mobile coffee ordering system using Firebase backend.",
+demo:"#",
+drive:"https://drive.google.com/drive/u/0/folders/1x1rumdt4soJdZDIjXbeZjCs4x2iwKG5K"
+},
+
+avatar:{
+title:"Interactive Desktop Cat Avatar",
+desc:"AI powered interactive avatar using Python and Unity.",
+demo:"#",
+drive:"https://drive.google.com/drive/u/0/folders/1TGqWx-TUM85WMUxYJkSZf0oygUJAeu55"
+}
+
+}
+
+document.getElementById("title").innerText=data[project].title
+document.getElementById("desc").innerText=data[project].desc
+document.getElementById("demo").href=data[project].demo
+document.getElementById("drive").href=data[project].drive
+
+</script>
+
+</body>
+</html>
