@@ -1,220 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uğurkan Yiğit Öztürk | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<section id="projects" class="projects-section">
 
-<body>
+  <h2>Projects</h2>
 
-<header class="navbar">
-<h2>UYÖ</h2>
+  <div class="projects">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#research">Research</a>
-  <a href="#contact">Contact</a>
-</nav>
-</header>
-
-<section class="hero">
-
-<img src="profile.jpeg" class="profile-photo">
-
-<div class="hero-text">
-
-<h1>Uğurkan Yiğit Öztürk</h1>
-
-<h3>Software Engineering Student | Cybersecurity & AI Enthusiast</h3>
-
-<p>
-Hello, I'm Yiğit. As a third-year software engineering student, I focus on
-cybersecurity, modern network architectures and artificial intelligence
-applications. My work includes Zero Trust security architectures,
-authentication systems and interactive AI based applications.
-</p>
-
-<div class="hero-badges">
-  <span class="hero-badge">Python</span>
-  <span class="hero-badge">Cybersecurity</span>
-  <span class="hero-badge">AI</span>
-  <span class="hero-badge">Backend</span>
-  <span class="hero-badge">ZTNA</span>
-</div>
-
-<div class="hero-buttons">
-
-<a href="CV.pdf" target="_blank" class="btn">View CV</a>
-
-<a href="https://github.com/Yigit-Ozturk-Ugurkan" target="_blank" class="btn">GitHub</a>
-
-<a href="https://www.linkedin.com/in/uğurkan-yiğit-öztürk-a6b8692b9" target="_blank" class="btn">LinkedIn</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="about-section">
-
-<h2>About Me</h2>
-
-<p>
-I am a third-year Software Engineering student focusing on secure system architectures,
-modern networking technologies and software development. My research interests include
-Zero Trust Network Access (ZTNA), authentication and authorization systems and
-Intent-Based Networking (IBN).
-</p>
-
-<p>
-I develop backend architectures, API based systems and data-driven software solutions.
-Alongside system design, I also work on artificial intelligence integration and
-interactive systems to build modern and intelligent software applications.
-</p>
-
-</section>
-
-<section id="skills" class="skills-section">
-
-<h2>Technical Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill-card">
-<h3>Programming</h3>
-<p>Python, Java, C, C++, SQL</p>
-</div>
-
-<div class="skill-card">
-<h3>Security</h3>
-<p>ZTNA, Authentication, Authorization, RBAC</p>
-</div>
-
-<div class="skill-card">
-<h3>Identity & Access</h3>
-<p>Keycloak, JWT, SSO</p>
-</div>
-
-<div class="skill-card">
-<h3>AI & Data</h3>
-<p>AI Integration, NLP, Data Analysis</p>
-</div>
-
-<div class="skill-card">
-<h3>Tools</h3>
-<p>Git, Docker, REST API</p>
-</div>
-
-<div class="skill-card">
-<h3>Soft Skills</h3>
-<p>Technical Reporting, Problem Solving, Project Management</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-<img src="ztna.png">
-<h3>ZTNA Security Platform</h3>
-<p>Zero Trust Network Access architecture using Keycloak and JWT.</p>
-
-<a href="project.html?project=ztna" class="btn">Details</a>
-</div>
-
-
-<div class="project-card">
-<img src="finance.png">
-<h3>Finance Tracker</h3>
-<p>Personal finance and investment tracking application.</p>
-
-<a href="project.html?project=finance" class="btn">Details</a>
-</div>
-
-
-<div class="project-card">
-<img src="coffee.png">
-<h3>Coffee App</h3>
-<p>Mobile coffee ordering system built with Firebase backend.</p>
-
-<a href="project.html?project=coffee" class="btn">Details</a>
-</div>
-
-
-<div class="project-card">
-<img src="avatar.png">
-<h3>Interactive AI Avatar</h3>
-<p>AI powered interactive avatar for story-based games.</p>
-
-<a href="project.html?project=avatar" class="btn">Details</a>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="research" class="research-section">
-  <h2>Research Interests</h2>
-
-  <div class="research-grid">
-    <div class="research-card">
-      <h3>Cyber Security</h3>
-      <p>Secure architectures, access control and modern protection models.</p>
+    <div class="project-card card-ztna">
+      <div class="project-content">
+        <span class="project-tag">Security</span>
+        <h3>ZTNA Security Platform</h3>
+        <p>Zero Trust Network Access architecture using Keycloak and JWT.</p>
+        <a href="project.html?project=ztna" class="project-link">View Project →</a>
+      </div>
     </div>
 
-    <div class="research-card">
-      <h3>Zero Trust Network Access</h3>
-      <p>Identity-focused secure access design for modern systems and services.</p>
+    <div class="project-card card-finance">
+      <div class="project-content">
+        <span class="project-tag">Finance</span>
+        <h3>Finance Tracker</h3>
+        <p>Personal finance and investment tracking application.</p>
+        <a href="project.html?project=finance" class="project-link">View Project →</a>
+      </div>
     </div>
 
-    <div class="research-card">
-      <h3>Intent-Based Networking</h3>
-      <p>Smarter network management approaches based on policy and automation.</p>
+    <div class="project-card card-coffee">
+      <div class="project-content">
+        <span class="project-tag">Mobile App</span>
+        <h3>Coffee App</h3>
+        <p>Mobile coffee ordering system built with Firebase backend.</p>
+        <a href="project.html?project=coffee" class="project-link">View Project →</a>
+      </div>
     </div>
 
-    <div class="research-card">
-      <h3>AI Applications</h3>
-      <p>Artificial intelligence integration for interactive and intelligent software.</p>
+    <div class="project-card card-avatar">
+      <div class="project-content">
+        <span class="project-tag">AI</span>
+        <h3>Interactive AI Avatar</h3>
+        <p>AI powered interactive avatar for story-based games.</p>
+        <a href="project.html?project=avatar" class="project-link">View Project →</a>
+      </div>
     </div>
 
-    <div class="research-card">
-      <h3>Emotional Interaction Systems</h3>
-      <p>User-centered interaction models for engaging and responsive experiences.</p>
-    </div>
-
-    <div class="research-card">
-      <h3>Secure Backend Architectures</h3>
-      <p>Authentication, authorization and reliable backend communication design.</p>
-    </div>
   </div>
-</section>
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: ugurkan.yigit.27@gmail.com</p>
 
 </section>
-
-<footer>
-
-<p>© 2026 Uğurkan Yiğit Öztürk</p>
-
-</footer>
-
-</body>
-</html>
