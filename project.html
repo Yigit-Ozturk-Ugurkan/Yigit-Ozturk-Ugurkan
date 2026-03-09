@@ -171,8 +171,20 @@
       document.getElementById("desc").innerText = item.desc;
       document.getElementById("projectImage").src = item.image;
       document.getElementById("projectImage").alt = item.title;
-      document.getElementById("demo").href = item.demo;
-      document.getElementById("drive").href = item.drive;
+      const demoBtn = document.getElementById("demo");
+      const driveBtn = document.getElementById("drive");
+
+      if (item.demo && item.demo !== "#") {
+        demoBtn.href = item.demo;
+      } else {
+        demoBtn.style.display = "none";
+      }
+
+      if (item.drive && item.drive !== "#") {
+        driveBtn.href = item.drive;
+      } else {
+        driveBtn.style.display = "none";
+      }
 
       const highlightsEl = document.getElementById("highlights");
       item.highlights.forEach(point => {
