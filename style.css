@@ -277,7 +277,7 @@ html {
 .detail-card {
   position: relative;
   overflow: hidden;
-  background: #FFFFFF;
+  background: var(--project-soft-color,#F3F4F6);
   border-radius: 24px;
   padding: 34px;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
