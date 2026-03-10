@@ -55,6 +55,7 @@
     const data = {
       ztna: {
         title: "ZTNA Security Platform",
+        color:"#BFE8FF",
         desc: "This project is a network access control system developed based on Zero Trust principles. Unlike traditional security models that assume the internal network is trusted, Zero Trust requires verification of every user and every access request. Within this project, a secure access architecture was designed with a strong focus on authentication, authorization and protected backend communication.",
         image: "ztna.png",
         demo: "https://wbt-project.com/",
@@ -85,6 +86,7 @@
 
       finance: {
         title: "Finance Tracker",
+        color:"#D2F0DF",
         desc: "This project is a personal finance and investment tracking application that enables users to monitor their income and expenses while also analyzing the performance of investment tools. The system was designed with a user-oriented approach and includes data-focused reporting and analysis screens for better financial awareness.",
         image: "finance.png",
         demo: "#",
@@ -108,6 +110,7 @@
 
       coffee: {
         title: "Coffee App",
+        color:"#F2E0C8",
         desc: "CoffeeApp is a mobile coffee ordering and management application that allows users to browse coffee and dessert products, place orders and review their order history. The application was developed with modern mobile interface principles and adopts a user experience focused design supported by Firebase services.",
         image: "coffee.png",
         demo: "#",
@@ -134,6 +137,7 @@
 
       avatar: {
         title: "Interactive AI Avatar",
+        color:"#E0D7FF",
         desc: "In this project, an AI-powered interactive character was developed for story-based games. The system is capable of building dynamic interaction with the player and generating contextual responses using natural language processing techniques. The aim of the project is to combine intelligent interaction with immersive software experiences.",
         image: "avatar.png",
         demo: "#",
@@ -167,6 +171,12 @@
         </section>
       `;
     } else {
+
+      document.documentElement.style.setProperty(
+      '--project-color',
+      item.color
+      );
+      
       document.getElementById("title").innerText = item.title;
       document.getElementById("desc").innerText = item.desc;
       document.getElementById("projectImage").src = item.image;
