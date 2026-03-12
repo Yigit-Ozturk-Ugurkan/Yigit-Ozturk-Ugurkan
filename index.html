@@ -59,7 +59,7 @@ authentication systems and interactive AI based applications.
 
 </section>
 
-<div class="hero-divider"></div>  
+<div class="section-divider"></div>  
 
 <section id="about" class="about-section">
 
@@ -80,6 +80,8 @@ interactive systems to build modern and intelligent software applications.
 
 </section>
 
+<div class="section-divider"></div>
+  
 <section id="skills" class="skills-section">
 
 <h2>Technical Skills</h2>
@@ -120,6 +122,8 @@ interactive systems to build modern and intelligent software applications.
 
 </section>
 
+<div class="section-divider"></div>
+  
 <section id="projects" class="projects-section">
   <h2>Projects</h2>
 
@@ -164,6 +168,8 @@ interactive systems to build modern and intelligent software applications.
   </div>
 </section>
 
+<div class="section-divider"></div>
+  
 <section id="contact">
 
 <h2>Contact</h2>
@@ -180,3 +186,25 @@ interactive systems to build modern and intelligent software applications.
 
 </body>
 </html>
+
+<script>
+
+const dividers = document.querySelectorAll('.section-divider');
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{ threshold:0.3 });
+
+dividers.forEach(divider => {
+observer.observe(divider);
+});
+
+</script>
