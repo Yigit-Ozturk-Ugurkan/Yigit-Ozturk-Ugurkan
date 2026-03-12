@@ -67,7 +67,7 @@ html{
     rgba(209,213,219,0.9),
     rgba(229,231,235,0)
   );
-  margin:0 60px 0;
+  margin:0 60px;
 }
 
 .hero::before{
