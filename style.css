@@ -615,3 +615,5 @@ hr{
     max-height:320px;
   }
 }
+
+[hidden] { display: none !important; }
